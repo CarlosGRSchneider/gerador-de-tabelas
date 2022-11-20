@@ -14,8 +14,9 @@ public class Funcionario {
         for (int i = 0; i < quantidadeGerada; i++) {
 
             int senioridade = random.nextInt(5) + 1;
-            sb.append("insert into funcionario(nome, cpf, idade, data_admissao, data_desligamento, salario, id_setor, id_senioridade)\n" +
-                    "   values('" + gerador.geraNomeFuncionario() + "', '" + gerador.geraCpfFuncionario() + "', " + gerador.geraIdade() + ", '" + gerador.geraDataAdmissao() + "', " + gerador.geraDataDesligamento() + ", " + gerador.geraSalario(senioridade) + ", " + gerador.geraSetor() + ", " + senioridade + ");\n");
+            sb.append("insert into funcionario(nome, cpf, idade, data_admissao, data_desligamento, salario, operadora_plano_saude, numero_dependentes, id_setor, id_senioridade)\n"
+                    + "   values('" + gerador.geraNomeFuncionario() + "', '" + gerador.geraCpfFuncionario() + "', " + gerador.geraIdade() + ", '" + gerador.geraDataAdmissao()
+                    + "', " + gerador.geraDataDesligamento() + ", " + gerador.geraSalario(senioridade) + ", '" + gerador.geraOperadoraPlanoSaude() + "', " + gerador.geraDependentes() + ", " + gerador.geraSetor() + ", " + senioridade + ");\n");
         }
         sb.append("\n");
         return sb.toString();

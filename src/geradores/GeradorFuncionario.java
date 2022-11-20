@@ -55,6 +55,8 @@ public class GeradorFuncionario {
             "da Trindade", "Trindade", "Teles", "Teixeira", "de Teixeira", "Uribe",
             "Wasconcelos", "Valença", "Valente", "Vasconcelos", "Veiga", "Veloso", "Vieira", "Vilhena", "Vicente", "Young", "Zema");
 
+    private final List<String> LISTA_OPERADORAS_PLANO_SAUDE = List.of("Unimed", "Sul América", "Doctor Clin");
+
     public GeradorFuncionario() {
     }
 
@@ -190,6 +192,27 @@ public class GeradorFuncionario {
             default:
                 return 0.0;
         }
+    }
+
+    public String geraOperadoraPlanoSaude() {
+        double possivelPlano = random.nextDouble();
+        if (possivelPlano < 0.4) {
+            return LISTA_OPERADORAS_PLANO_SAUDE.get(0);
+        } else if (possivelPlano >= 0.4 && possivelPlano < 0.65) {
+            return LISTA_OPERADORAS_PLANO_SAUDE.get(1);
+        } else if (possivelPlano >= 0.65 && possivelPlano < 0.85) {
+            return LISTA_OPERADORAS_PLANO_SAUDE.get(2);
+        }
+        return "null";
+    }
+
+    public String geraDependentes() {
+        double possivelDependente = random.nextDouble();
+        if (possivelDependente > 0.15) {
+            Integer numeroDependentes = random.nextInt(5);
+            return numeroDependentes.toString();
+        }
+        return "null";
     }
 
     public Integer geraSetor() {

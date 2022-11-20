@@ -18,8 +18,8 @@ public class Main {
         try(FileWriter fw = new FileWriter(nomeArquivo)) {
 
             fw.write(Tabelas.criaTabelas());
-            fw.write(Setor.geraSetor());
-            fw.write(Senioridade.geraSenioridade());
+            fw.write(Setor.geraSetores());
+            fw.write(Senioridade.geraSenioridades());
             fw.write(Funcionario.geraFuncionarios(quantidadeDados));
             fw.write(Endereco.geraEnderecos(quantidadeDados));
 

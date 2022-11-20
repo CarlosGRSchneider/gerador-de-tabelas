@@ -2,7 +2,7 @@ package entradas;
 
 public class Setor {
 
-    public static String geraSetor() {
+    public static String geraSetores() {
         StringBuilder sb = new StringBuilder();
         sb.append("insert into setor(nome_setor) \n" +
                 "   values ('Desenvolvimento');\n");

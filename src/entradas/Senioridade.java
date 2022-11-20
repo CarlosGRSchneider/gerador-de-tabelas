@@ -2,7 +2,7 @@ package entradas;
 
 public class Senioridade {
 
-    public static String geraSenioridade() {
+    public static String geraSenioridades() {
         StringBuilder sb = new StringBuilder();
         sb.append("insert into senioridade(grau_senioridade, valor_bonus) \n" +
                 "   values('Assistente', 0.4);\n");

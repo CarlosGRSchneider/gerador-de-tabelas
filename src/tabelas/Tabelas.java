@@ -26,6 +26,8 @@ public class Tabelas {
                 "   data_admissao date not null, \n" +
                 "   data_desligamento date, \n" +
                 "   salario numeric not null, \n" +
+                "   operadora_plano_saude varchar(40), \n" +
+                "   numero_dependentes smallint, \n" +
                 "   id_setor smallint not null, \n" +
                 "   id_senioridade smallint not null);\n";
     }
