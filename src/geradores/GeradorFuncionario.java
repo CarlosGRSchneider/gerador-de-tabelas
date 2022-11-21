@@ -197,11 +197,11 @@ public class GeradorFuncionario {
     public String geraOperadoraPlanoSaude() {
         double possivelPlano = random.nextDouble();
         if (possivelPlano < 0.4) {
-            return LISTA_OPERADORAS_PLANO_SAUDE.get(0);
+            return "'" + LISTA_OPERADORAS_PLANO_SAUDE.get(0) + "'";
         } else if (possivelPlano >= 0.4 && possivelPlano < 0.65) {
-            return LISTA_OPERADORAS_PLANO_SAUDE.get(1);
+            return "'" + LISTA_OPERADORAS_PLANO_SAUDE.get(1) + "'";
         } else if (possivelPlano >= 0.65 && possivelPlano < 0.85) {
-            return LISTA_OPERADORAS_PLANO_SAUDE.get(2);
+            return "'" + LISTA_OPERADORAS_PLANO_SAUDE.get(2) + "'";
         }
         return "null";
     }
@@ -216,6 +216,17 @@ public class GeradorFuncionario {
     }
 
     public Integer geraSetor() {
-        return random.nextInt(5) + 1;
+        double possivelSetor = random.nextDouble();
+        if (possivelSetor < 0.4) {
+            return 1;
+        } else if (possivelSetor >= 0.4 && possivelSetor < 0.45) {
+            return 2;
+        } else if (possivelSetor >= 0.45 && possivelSetor < 0.65) {
+            return 3;
+        } else if (possivelSetor >= 0.65 && possivelSetor < 0.85) {
+            return 4;
+        }
+        return 5;
+
     }
 }
